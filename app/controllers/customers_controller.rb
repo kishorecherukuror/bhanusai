@@ -19,6 +19,7 @@ class CustomersController < ApplicationController
 
   # GET /customers/1/edit
   def edit
+    @a = 10
   end
 
   # POST /customers
