@@ -1,0 +1,8 @@
+<h1>Orders#new_order</h1>
+
+<%= form_for @order , url: {action: "new_create"} do |f| %>
+	Products: <%= f.text_field :products %> <br/>
+	Price: <%= f.text_field :price %><br />
+	<%= hidden_field_tag :customer_id, @customer.id %>
+	<%= f.submit %>
+<% end %>
