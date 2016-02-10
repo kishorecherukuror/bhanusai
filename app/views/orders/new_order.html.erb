@@ -1,3 +1,21 @@
+<table border= "1">
+<tr>
+<th>
+	Products
+</th>
+<th>
+    Price
+</th>
+</tr>
+<% @orders.each do |o| %>
+<tr>
+<td><%=o.products%></td>
+<td><%=o.price%></td>
+</tr>
+<% end %>
+<tr></tr>
+</table>
+
 <h1>Orders#new_order</h1>
 
 <%= form_for @order , url: {action: "new_create"} do |f| %>

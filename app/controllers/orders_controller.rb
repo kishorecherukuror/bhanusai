@@ -1,12 +1,12 @@
 class OrdersController < ApplicationController
   def new_order
   	@customer = Customer.find(params[:id])
+    @orders = @customer.orders
   	@order = Order.new
 
   end
 
   def new_create
-  	binding.pry
   	@customer = Customer.find(params[:customer_id])
   	@order = @customer.orders.new(orders_params)
   	if @order.save
